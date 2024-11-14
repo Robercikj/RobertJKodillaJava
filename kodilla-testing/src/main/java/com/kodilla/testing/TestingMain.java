@@ -1,5 +1,7 @@
 package com.kodilla.testing;
 
+import com.kodilla.testing.Calculator.Calculator;
+
 public class TestingMain {
     public String findVowels(String text) {
         String vowels = "aeiouAEIOU";
@@ -20,6 +22,20 @@ public class TestingMain {
         String onlyVowels2 = testingMain.findVowels("Antarktyda");
         System.out.println(onlyVowels2);
         System.out.println(onlyVowels);
+
+
+        // add substract
+        Calculator calculator = new Calculator();
+        int result =calculator.add(5,5);
+
+        int result1 = calculator.subtract(5,5);
+        if(result == 10){
+            System.out.println(" method add - OK");
+        } else {
+            System.out.println("add - ERROR");
+        }
+        System.out.println(result);
+        System.out.println(result1);
 
 
 
