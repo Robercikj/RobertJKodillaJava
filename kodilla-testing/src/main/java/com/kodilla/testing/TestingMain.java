@@ -24,7 +24,7 @@ public class TestingMain {
         System.out.println(onlyVowels);
 
 
-        // add substract
+        // add and substract
         Calculator calculator = new Calculator();
         int result =calculator.add(5,5);
 
