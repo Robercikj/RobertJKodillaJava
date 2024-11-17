@@ -27,12 +27,16 @@ public class TestingMain {
         // add and substract
         Calculator calculator = new Calculator();
         int result =calculator.add(5,5);
-
-        int result1 = calculator.subtract(5,5);
         if(result == 10){
             System.out.println(" method add - OK");
         } else {
             System.out.println("add - ERROR");
+        }
+        int result1 = calculator.subtract(5,5);
+        if (result1 == 0){
+            System.out.println(" method subtract - OK");
+        }else{
+            System.out.println("subtract - ERROR");
         }
         System.out.println(result);
         System.out.println(result1);
