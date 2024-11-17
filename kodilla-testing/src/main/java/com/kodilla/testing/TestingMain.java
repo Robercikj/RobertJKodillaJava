@@ -1,6 +1,7 @@
 package com.kodilla.testing;
 
 import com.kodilla.testing.Calculator.Calculator;
+import com.kodilla.testing.user.SimpleUser;
 
 public class TestingMain {
     public String findVowels(String text) {
@@ -16,6 +17,16 @@ public class TestingMain {
         return result;
     }
     public static void main(String[] args) {
+        SimpleUser simpleUser = new SimpleUser("Robert", "Jurek");
+        String word = simpleUser.getUsername();
+
+
+
+
+
+
+
+
         System.out.println("Moduł 6. Wprowadzenie do testowania oprogramowania");
         TestingMain testingMain = new TestingMain();
         String onlyVowels = testingMain.findVowels("Adam");
