@@ -1,3 +1,4 @@
+import com.kodilla.testing.forum.statistics.ForumStatistics;
 import com.kodilla.testing.shape.*;
 import com.kodilla.testing.shape.Shape;
 
@@ -5,6 +6,24 @@ import java.awt.*;
 
 public class TestingMain {
     public static void main(String[] args) {
+        ForumStatistics statistics = new ForumStatistics();
+        statistics.showStatistics();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         ShapeCollector collector = new ShapeCollector();
 
         Shape circle = new Circle(5);
