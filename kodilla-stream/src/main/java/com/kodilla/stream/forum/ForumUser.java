@@ -1,80 +1,51 @@
 package com.kodilla.stream.forum;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Nodes.collect;
+import java.time.LocalDate;
 
 public final class ForumUser {
+    private final int userId;
     private final String username;
-    private final String realname;
-    private final String location;
-    private final Set<ForumUser> friends = new HashSet<>();
+    private final char gender;
+    private final LocalDate dateOfBirth;
+    private final int postCount;
 
-
-    public ForumUser(final String username,final  String realname,final  String location) {
+    public ForumUser(int userId, String username, char gender, LocalDate dateOfBirth, int postCount) {
+        this.userId = userId;
         this.username = username;
-        this.realname = realname;
-        this.location = location;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.postCount = postCount;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public String getRealname() {
-        return realname;
+    public int getUserId() {
+        return userId;
     }
 
     public String getUsername() {
         return username;
     }
 
+    public char getGender() {
+        return gender;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public int getPostCount() {
+        return postCount;
+    }
+
     @Override
     public String toString() {
         return "ForumUser{" +
-                "location='" + location + '\'' +
-                ", realname='" + realname + '\'' +
+                "userId=" + userId +
                 ", username='" + username + '\'' +
+                ", gender=" + gender +
+                ", dateOfBirth=" + dateOfBirth +
+                ", postCount=" + postCount +
                 '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ForumUser)) return false;
-        ForumUser forumUser = (ForumUser) o;
-        return username.equals(forumUser.username);
-    }
-
-    @Override
-    public int hashCode() {
-        return username.hashCode();
-    }
-    public Set<ForumUser> getFriends() {
-        return friends;
-    }
-    public void addFriend(ForumUser user) {
-        friends.add(user);
-    }
-
-    public boolean removeFriend(ForumUser user) {
-        return friends.remove(user);
-    }
-    public Set<String> getLocationsOfFriends() {
-        return friends.stream()
-                .map(ForumUser::getLocation)                    // [1]
-                .collect(Collectors.toSet());
-    }
-    public Set<String> getLocationsOfFriendsOfFriends() {
-        return friends.stream()
-                .flatMap(user -> user.getFriends().stream())
-                .filter(user -> user != this)
-                .map(ForumUser::getLocation)
-                .collect(Collectors.toSet());
-    }
-
 }
+
