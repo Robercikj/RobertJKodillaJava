@@ -10,4 +10,6 @@ class KodillaExceptionApplicationTests {
     void contextLoads() {
     }
 
+
+
 }
