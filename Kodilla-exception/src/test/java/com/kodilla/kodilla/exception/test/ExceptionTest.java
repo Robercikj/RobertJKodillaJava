@@ -1,5 +1,9 @@
 package com.kodilla.kodilla.exception.test;
 
+import com.kodilla.kodilla.exception.main.Flight;
+import com.kodilla.kodilla.exception.main.FlightSearcher;
+import com.kodilla.kodilla.exception.main.RouteNotFoundException;
+
 public class ExceptionTest {
     public static void main(String[] args) {
     FlightSearcher searcher = new FlightSearcher();
