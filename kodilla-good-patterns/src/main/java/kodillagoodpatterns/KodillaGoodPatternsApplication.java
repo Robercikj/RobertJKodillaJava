@@ -1,7 +1,7 @@
 package kodillagoodpatterns;
 
-import kodillagoodpatterns.challenges.Calculator;
-import kodillagoodpatterns.challenges.MovieStore;
+import kodillagoodpatterns.challenges.movieExc.Calculator;
+import kodillagoodpatterns.challenges.movieExc.MovieStore;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;

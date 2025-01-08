@@ -1,4 +1,4 @@
-package kodillagoodpatterns.challenges;
+package kodillagoodpatterns.challenges.movieExc;
 
 public class Calculator {
 
