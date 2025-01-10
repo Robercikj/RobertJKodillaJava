@@ -1,4 +1,4 @@
-package kodillagoodpatterns.challenges.model;
+package kodillagoodpatterns.challenges.allegro.model;
 
 public class User {
     private String name;

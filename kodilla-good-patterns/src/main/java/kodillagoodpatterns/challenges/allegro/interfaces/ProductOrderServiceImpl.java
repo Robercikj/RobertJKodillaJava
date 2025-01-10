@@ -1,8 +1,7 @@
-package kodillagoodpatterns.challenges.interfaces;
+package kodillagoodpatterns.challenges.allegro.interfaces;
 
-import kodillagoodpatterns.challenges.ProductOrderService;
-import kodillagoodpatterns.challenges.model.Product;
-import kodillagoodpatterns.challenges.model.User;
+import kodillagoodpatterns.challenges.allegro.model.Product;
+import kodillagoodpatterns.challenges.allegro.model.User;
 
 public class ProductOrderServiceImpl implements OrderService {
 

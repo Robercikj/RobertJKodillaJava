@@ -1,10 +1,10 @@
-package kodillagoodpatterns.challenges;
+package kodillagoodpatterns.challenges.allegro;
 
-import kodillagoodpatterns.challenges.interfaces.InformationService;
-import kodillagoodpatterns.challenges.interfaces.OrderRepository;
-import kodillagoodpatterns.challenges.interfaces.OrderService;
-import kodillagoodpatterns.challenges.model.OrderDto;
-import kodillagoodpatterns.challenges.model.OrderRequest;
+import kodillagoodpatterns.challenges.allegro.interfaces.InformationService;
+import kodillagoodpatterns.challenges.allegro.interfaces.OrderRepository;
+import kodillagoodpatterns.challenges.allegro.interfaces.OrderService;
+import kodillagoodpatterns.challenges.allegro.model.OrderDto;
+import kodillagoodpatterns.challenges.allegro.model.OrderRequest;
 
 public class ProductOrderService {
     private InformationService informationService;

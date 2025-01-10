@@ -1,6 +1,4 @@
-package kodillagoodpatterns.food2Door;
-
-import kodillagoodpatterns.challenges.model.Product;
+package kodillagoodpatterns.challenges.food2Door;
 
 public class ExtraFoodShop implements Producer{
     @Override

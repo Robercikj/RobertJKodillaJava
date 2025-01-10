@@ -1,15 +1,12 @@
-package kodillagoodpatterns.challenges.model;
+package kodillagoodpatterns.challenges.allegro.model;
 
 public class OrderRequest {
     private User user;
     private Product product;
 
-    public OrderRequest(Product product, User user) {
+    public OrderRequest( User user,Product product) {
         this.product = product;
         this.user = user;
-    }
-
-    public OrderRequest(User user, Product product) {
     }
 
     public User getUser() {

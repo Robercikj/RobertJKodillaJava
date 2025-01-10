@@ -1,4 +1,4 @@
-package kodillagoodpatterns.food2Door;
+package kodillagoodpatterns.challenges.food2Door;
 
 public class Ordering {
     public void processingOrder(Producer producer, String product, int quantity, Unit unit){

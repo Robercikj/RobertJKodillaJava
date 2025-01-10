@@ -1,6 +1,4 @@
-package kodillagoodpatterns.challenges.model;
-
-import org.springframework.core.annotation.Order;
+package kodillagoodpatterns.challenges.allegro.model;
 
 public class OrderDto {
     private User user;

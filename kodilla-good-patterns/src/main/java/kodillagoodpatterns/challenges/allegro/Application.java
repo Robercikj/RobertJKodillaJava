@@ -1,10 +1,10 @@
-package kodillagoodpatterns.challenges;
+package kodillagoodpatterns.challenges.allegro;
 
-import kodillagoodpatterns.challenges.interfaces.*;
-import kodillagoodpatterns.challenges.model.OrderDto;
-import kodillagoodpatterns.challenges.model.OrderRequest;
-import kodillagoodpatterns.challenges.model.Product;
-import kodillagoodpatterns.challenges.model.User;
+import kodillagoodpatterns.challenges.allegro.interfaces.*;
+import kodillagoodpatterns.challenges.allegro.model.OrderDto;
+import kodillagoodpatterns.challenges.allegro.model.OrderRequest;
+import kodillagoodpatterns.challenges.allegro.model.Product;
+import kodillagoodpatterns.challenges.allegro.model.User;
 
 public class Application {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Application {
         OrderRequest orderRequest = new OrderRequest(user, product);
         OrderDto orderDto = productOrderService.process(orderRequest);
 
-        System.out.println("Order successed: " + orderDto.isOrdered());
     }
+
 
 }
