@@ -14,15 +14,16 @@ public class LoggerTestSuite {
         String lastLog = logger.getLastLog();
         assertEquals("first Log message", lastLog);
     }
+
     @Test
     void logTest2() {
-//given
+        //given
         Logger logger1 = Logger.INSTANCE;
         Logger logger2 = Logger.INSTANCE;
-//when
+        //when
         logger1.log(" second log message");
         String log2 = logger2.getLastLog();
-//then
+        //then
 
         assertEquals(" second log message", logger2.getLastLog());
         assertEquals(logger1, logger2);
