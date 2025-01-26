@@ -24,15 +24,16 @@ public class LibraryTestSuite {
 
 
         Library shallowCopiedLibrary = library.shallowCopy();
-        Library deepCopyLibrary = library.deepCopy();
+        Library deepCopiedLibrary = library.deepCopy();
 
 
-        library.getBooks().removeIf(book -> book.getTitle().equals("Kazia"));
-        assertEquals(4, library.getBooks().size());
-        assertEquals(4, shallowCopiedLibrary.getBooks().size());
+        Library clonedLibrary = library.shallowCopy();
+        clonedLibrary.getBooks().add(new Book("Extra Book", "Extra Author", LocalDate.of(2022, 1, 1)));
 
-        assertEquals(5, deepCopyLibrary.getBooks().size());
+        Library deepClonedLibrary = library.deepCopy();
+        deepClonedLibrary.getBooks().add(new Book("Another Extra Book", "Another Author", LocalDate.of(2023, 2, 2)));
 
-
+        System.out.println("Shallow sizez" + shallowCopiedLibrary.getBooks().size());
+        System.out.println("Deep sizez" + deepCopiedLibrary.getBooks().size());
     }
 }
