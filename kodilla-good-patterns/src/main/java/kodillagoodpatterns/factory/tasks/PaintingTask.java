@@ -1,6 +1,7 @@
 package kodillagoodpatterns.factory.tasks;
 
 public class PaintingTask implements Task{
+    private boolean isExecuted = false;
     private final String taskName;
     private final String color;
     private final String whatToPaint;
@@ -13,6 +14,7 @@ public class PaintingTask implements Task{
 
     @Override
     public String executeTask() {
+       isExecuted = true;
         return taskName + " " + color + " " + whatToPaint;
     }
 
@@ -23,6 +25,7 @@ public class PaintingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        return true;
+
+        return isExecuted ;
     }
 }

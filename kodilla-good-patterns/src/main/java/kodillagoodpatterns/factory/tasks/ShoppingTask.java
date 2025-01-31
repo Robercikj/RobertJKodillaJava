@@ -1,6 +1,7 @@
 package kodillagoodpatterns.factory.tasks;
 
 public class ShoppingTask implements Task{
+    private boolean isExecuted = false;
     private final String taskName;
     private final String whatToBuy;
     private final double quantity;
@@ -22,6 +23,7 @@ public class ShoppingTask implements Task{
 
     @Override
     public String executeTask() {
+        isExecuted = true;
         return taskName + " " + whatToBuy + " " + quantity;
     }
 
@@ -32,6 +34,6 @@ public class ShoppingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        return true;
+        return isExecuted;
     }
 }

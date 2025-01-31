@@ -1,7 +1,7 @@
 package kodillagoodpatterns.factory.tasks;
 
 public class DrivingTask implements Task{
-
+    private boolean isExecuted = false;
     private final String taskName;
     private final String where;
     private final String using;
@@ -14,6 +14,7 @@ public class DrivingTask implements Task{
 
     @Override
     public String executeTask() {
+        isExecuted = true;
         return taskName + " " + where + " " + using;
     }
 
@@ -24,6 +25,6 @@ public class DrivingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        return true;
+        return isExecuted ;
     }
 }
