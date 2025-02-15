@@ -9,6 +9,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
+import java.util.Optional;
 
 @Transactional
 @SpringBootTest
@@ -26,5 +27,17 @@ public class InvoiceDaoTestSuite {
 
     Invoice invoice = new Invoice();
     invoice.add(item);
+    invoice.add(item1);
+
+    InvoiceDao.save();
+    int invoiceId = invoice.getId();
+
+    Optional<Invoice> savedInvoices = invoiceDao.findById(invoiceId);
+    assertTrue(savedInvices.isPresent());
+    assertEquals(2,savedInvoices.get().getItems().size());
+
+    invoiceDao.deleteById();
+
+
 
 }
