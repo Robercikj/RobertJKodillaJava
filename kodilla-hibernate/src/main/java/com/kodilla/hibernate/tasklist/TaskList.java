@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.spring.web.hibernate.tasklist;
+package com.kodilla.hibernate.tasklist;
 
 
 import jakarta.persistence.*;

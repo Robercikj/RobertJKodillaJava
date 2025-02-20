@@ -1,7 +1,6 @@
 package com.kodilla.hibernate.tasklist;
 
-import com.kodilla.kodilla.spring.web.hibernate.tasklist.TaskList;
-import com.kodilla.kodilla.spring.web.hibernate.tasklist.TaskListRepo;
+
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

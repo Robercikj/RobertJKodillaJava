@@ -1,8 +1,6 @@
-package com.kodilla.kodilla.spring.web.hibernate.invoice;
+package com.kodilla.hibernate.invoice;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,25 +8,26 @@ import java.util.List;
 @Entity
 public class Invoice {
     @Id
-    int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
     String number;
     @OneToMany(mappedBy = "invoice")
     List<Item> items = new ArrayList<Item>();
 
     public Invoice() {}
 
-    public Invoice(int id, String number, List<Item> items) {
+    public Invoice(Long id, String number, List<Item> items) {
         this.id = id;
         this.number = number;
         this.items = items;
     }
 
-    public int getId() {
-        return id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public Long getId() {
+        return id;
     }
 
     public String getNumber() {

@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.spring.web.hibernate.invoice;
+package com.kodilla.hibernate.invoice;
 
 import jakarta.persistence.*;
 
