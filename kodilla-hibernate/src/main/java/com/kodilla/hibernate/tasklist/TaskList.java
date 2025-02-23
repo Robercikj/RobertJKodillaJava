@@ -2,6 +2,7 @@ package com.kodilla.hibernate.tasklist;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name="TASKLISTS")
@@ -9,8 +10,10 @@ public class TaskList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotNull
     private int id;
     @Column(name = "listname")
+    @NotNull
     private String listName;
     @Column(name = "description")
     private String description;
