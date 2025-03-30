@@ -1,3 +1,5 @@
+package com.kodilla.sudoku;
+
 public class SudokuGame {
     public static boolean resolveSudoku() {
         return true;

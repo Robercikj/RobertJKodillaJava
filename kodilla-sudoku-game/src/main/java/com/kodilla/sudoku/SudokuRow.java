@@ -1,3 +1,5 @@
+package com.kodilla.sudoku;
+
 import java.util.Arrays;
 import java.util.List;
 
